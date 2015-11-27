@@ -26,7 +26,7 @@ pinnum=[21, 19, 15, 11, 07, 03, 05, 13]
 #[Do no change followings]
 # onoff bit (7segment led > a..g)
 onoff=[ 
-[True,  True, True, True,  True,      True,  True,  False ], # disp 0
+[True,  True, True, True,  True,      True,  False, False ], # disp 0
 [False, True, True, False, False,     False, False, False ], # disp 1
 [True,  True, False, True,  True,      False,  True, False ], # disp 2
 [True,  True, True,  True, False,      False, True, False], # disp 3
