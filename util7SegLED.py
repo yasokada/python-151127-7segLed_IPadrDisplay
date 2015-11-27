@@ -30,7 +30,7 @@ onoff=[
 [False, True, True, False, False,     False, False, False ], # disp 1
 [True,  True, False, True,  True,      False,  True, False ], # disp 2
 [True,  True, True,  True, False,      False, True, False], # disp 3
-[False, True, True, False, False,      False, True,  False ], # disp 4
+[False, True, True, False, False,      True, True,  False ], # disp 4
 [True, False, True, True, False,       True,  True, False], # disp 5
 [True, False, True, True,  True,       True, True, False], # disp 6
 [True, True, True, False, False,       True, False, False], # disp 7
