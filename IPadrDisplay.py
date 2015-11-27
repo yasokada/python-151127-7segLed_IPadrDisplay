@@ -3,6 +3,6 @@ import time
 
 while True:
 	info7seg_init()
-	for idx in range(0, 10):
+	for idx in range(0, 11):
 		info7seg_on(idx)
 		time.sleep(2)

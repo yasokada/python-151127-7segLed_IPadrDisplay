@@ -43,11 +43,9 @@ onoff=[
 #-------------------
 
 def info7seg_init():
-	print "init"
 	for idx in range(0, len(pinnum)): 
 		GPIO.setup(pinnum[idx], GPIO.OUT) # a..h
 
 def info7seg_on(number):
-	print "on"
 	for idx in range(0, len(pinnum)): # a..h
 		GPIO.output(pinnum[idx], onoff[number][idx])
