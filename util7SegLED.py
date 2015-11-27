@@ -12,8 +12,16 @@ GPIO.setmode(GPIO.BOARD)
 
 #-------------------
 #[User Configuration]
-# Pin# of RPi2 (Change according to the cable connections)
-pinnum=[3, 5, 7, 11, 13, 15, 19, 21]
+# (Change according to the cable connections)
+#
+# Pin # of RPi2
+#  to Pin# of 7seg LED a..h
+#
+# > case.1 assignment so that user can connect starting from #2
+#   of C-361SR to left upper pin of RPi2 GPIO port
+pinnum=[21, 19, 15, 11, 07, 03, 05, 13]
+
+
 #-------------------
 #[Do no change followings]
 # onoff bit (7segment led > a..g)
