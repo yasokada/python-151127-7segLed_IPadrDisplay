@@ -18,7 +18,7 @@ GPIO.setmode(GPIO.BOARD)
 #  to Pin# of 7seg LED a..h
 #
 # > case.1 assignment so that user can connect starting from #2
-#   of C-361SR to left upper pin of RPi2 GPIO port
+#   of C-361SR to left upper pin of RPi2 GPIO port downward
 pinnum=[21, 19, 15, 11, 07, 03, 05, 13]
 
 
