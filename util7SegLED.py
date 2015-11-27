@@ -2,10 +2,10 @@
 
 #--- selection of import based on the package ---
 ''' 1. with RPi.GPIO'''
-#import RPi.GPIO as GPIO
+import RPi.GPIO as GPIO
 ''' 2. without RPi.GPIO'''
-from dummyGPIO import CDummyGPIO
-GPIO = CDummyGPIO()
+#from dummyGPIO import CDummyGPIO
+#GPIO = CDummyGPIO()
 #-----------------
 
 GPIO.setmode(GPIO.BOARD)
