@@ -7,6 +7,7 @@ import time
 
 '''
 v0.2  2015/11/28
+  - disp IP address using utilNetworkIP
   - add disp_ipAddress()
   - extract method to disp_0_9_DP()
   - use all off function
@@ -30,11 +31,15 @@ ipadr = NetworkIP_get_ipAddress_eth0()
 
 info7seg_init()
 
+disp_0_9_DP(0.5) # initial test
+
 for loop in range(0,3):
 	info7seg_onDecimalPointOff(0.5)
 	info7seg_allOff()
 	time.sleep(0.5)
 
-disp_ipAddress(ipadr, 0.5)
+while True:
+	disp_ipAddress(ipadr, 0.5)
+	info7seg_allOff()
+	time.sleep(2.0)
 
-disp_0_9_DP(0.5)
