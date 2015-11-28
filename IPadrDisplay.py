@@ -1,5 +1,6 @@
 from util7SegLED import info7seg_init, info7seg_on, info7seg_allOff
 from util7SegLED import info7seg_decimalPoint
+from util7SegLED import info7seg_onOff
 import time
 
 '''
@@ -13,8 +14,7 @@ v0.1  2015/11/28
 def disp_0_9_DP(intvl):
 	while True:
 		for idx in range(0, 11):
-			info7seg_on(idx)
-			time.sleep(intvl)
+			info7seg_onOff(idx, intvl)
 
 info7seg_init()
 

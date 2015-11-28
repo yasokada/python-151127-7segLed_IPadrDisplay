@@ -1,4 +1,4 @@
-#import time
+import time
 
 #--- selection of import based on the package ---
 ''' 1. with RPi.GPIO'''
@@ -48,7 +48,6 @@ onoff=[
 [False, False, False, False, False,     False, False, True], # disp .
 ]
 # TODO: 0z > add out of range display
-# TODO: 0z > add all off function
 #-------------------
 
 def info7seg_init():
@@ -65,3 +64,7 @@ def info7seg_allOff():
 
 def info7seg_decimalPoint():
 	info7seg_on(10)
+
+def info7seg_onOff(number, duration):
+	info7seg_on(number)
+	time.sleep(duration)
