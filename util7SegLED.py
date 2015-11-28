@@ -69,3 +69,7 @@ def info7seg_decimalPoint():
 def info7seg_onOff(number, duration):
 	info7seg_on(number)
 	time.sleep(duration)
+
+def info7seg_onDecimalPointOff(duration):
+	info7seg_on(10)
+	time.sleep(duration)
