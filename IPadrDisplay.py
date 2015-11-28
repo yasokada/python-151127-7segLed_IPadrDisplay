@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 from util7SegLED import info7seg_init, info7seg_on, info7seg_allOff
 from util7SegLED import info7seg_decimalPoint
 from util7SegLED import info7seg_onOff
