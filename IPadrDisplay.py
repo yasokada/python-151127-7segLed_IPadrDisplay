@@ -14,9 +14,8 @@ v0.1  2015/11/28
 '''
 
 def disp_0_9_DP(intvl):
-	while True:
-		for idx in range(0, 11):
-			info7seg_onOff(idx, intvl)
+	for idx in range(0, 11):
+		info7seg_onOff(idx, intvl)
 
 def disp_ipAddress(ipadr, intvl_sec):
 	for idx in range(0, len(ipadr)):
