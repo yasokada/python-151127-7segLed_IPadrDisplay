@@ -10,6 +10,7 @@ import RPi.GPIO as GPIO
 
 '''
 v0.2  2015/11/28
+	- add info7seg_decimalPoint()
 	- add info7seg_allOff()
 v0.1  2015/11/28
 	- add info7seg_init()
