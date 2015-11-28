@@ -7,6 +7,8 @@ from utilNetworkIP import NetworkIP_get_ipAddress_eth0
 import time
 
 '''
+v0.3  2015/11/28
+  - add wait (10sec) to avoid failure at /etc/rc.local auto start
 v0.2  2015/11/28
   - disp IP address using utilNetworkIP
   - add disp_ipAddress()
@@ -27,6 +29,8 @@ def disp_ipAddress(ipadr, intvl_sec):
 		else:
 			val = int(ipadr[idx])
 			info7seg_onOff(val, intvl_sec)
+
+time.sleep(10) # to avoid failure at /etc/rc.local auto start
 
 ipadr = NetworkIP_get_ipAddress_eth0()
 
