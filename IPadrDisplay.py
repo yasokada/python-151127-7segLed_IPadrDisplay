@@ -14,5 +14,5 @@ while True:
 		info7seg_on(idx)
 		time.sleep(2)
 
-	info7seq_allOff()
+	info7seg_allOff()
 	time.sleep(2)
