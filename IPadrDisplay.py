@@ -2,6 +2,7 @@ from util7SegLED import info7seg_init, info7seg_on, info7seg_allOff
 from util7SegLED import info7seg_decimalPoint
 from util7SegLED import info7seg_onOff
 from util7SegLED import info7seg_onDecimalPointOff
+from utilNetworkIP import NetworkIP_get_ipAddress_eth0
 import time
 
 '''
@@ -25,6 +26,8 @@ def disp_ipAddress(ipadr, intvl_sec):
 			val = int(ipadr[idx])
 			info7seg_onOff(val, intvl_sec)
 
+ipadr = NetworkIP_get_ipAddress_eth0()
+
 info7seg_init()
 
 for loop in range(0,3):
@@ -32,6 +35,6 @@ for loop in range(0,3):
 	info7seg_allOff()
 	time.sleep(0.5)
 
-disp_ipAddress("192.168", 0.5)
+disp_ipAddress(ipadr, 0.5)
 
 disp_0_9_DP(0.5)
