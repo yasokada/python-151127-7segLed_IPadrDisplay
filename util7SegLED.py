@@ -8,6 +8,14 @@ import RPi.GPIO as GPIO
 #GPIO = CDummyGPIO()
 #-----------------
 
+'''
+v0.2  2015/11/28
+	- add info7seg_allOff()
+v0.1  2015/11/28
+	- add info7seg_init()
+	- add info7seg_on()
+'''
+
 GPIO.setmode(GPIO.BOARD)
 
 #-------------------
@@ -49,3 +57,7 @@ def info7seg_init():
 def info7seg_on(number):
 	for idx in range(0, len(pinnum)): # a..h
 		GPIO.output(pinnum[idx], onoff[number][idx])
+
+def info7seg_allOff():
+	for idx in range(0, len(pinnum)): # a..h
+		GPIO.output(pinnum[idx], False)
