@@ -20,6 +20,7 @@ info7seg_init()
 
 for loop in range(0,3):
 	info7seg_decimalPoint()
+	time.sleep(2)
 	info7seg_allOff()
 	time.sleep(2)
 
