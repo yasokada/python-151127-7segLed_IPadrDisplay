@@ -61,3 +61,7 @@ def info7seg_on(number):
 def info7seg_allOff():
 	for idx in range(0, len(pinnum)): # a..h
 		GPIO.output(pinnum[idx], False)
+
+def info7seg_decimalPoint():
+	for idx in range(0, len(pinnum)): # a..h
+		GPIO.output(pinnum[idx], onoff[7][idx])
