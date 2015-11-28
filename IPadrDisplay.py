@@ -1,4 +1,4 @@
-from util7SegLED import info7seg_init, info7seg_on
+from util7SegLED import info7seg_init, info7seg_on, info7seg_allOff
 import time
 
 '''
