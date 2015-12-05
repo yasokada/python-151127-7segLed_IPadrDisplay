@@ -3,6 +3,8 @@ import fcntl
 import struct
 
 '''
+v0.3  2015/12/05
+	- add NetworkIP_get_ipAddress_wlan0()
 v0.2  2015/12/05
 	- return kErrorIP when the network is not available
 v0.1  2015/11/28
@@ -26,4 +28,6 @@ def get_ip_address(ifname):
 def NetworkIP_get_ipAddress_eth0():
 	return get_ip_address('eth0')
 
+def NetworkIP_get_ipAddress_wlan0():
+	return get_ip_address('wlan0')
 

@@ -3,10 +3,12 @@ from util7SegLED import info7seg_init, info7seg_on, info7seg_allOff
 from util7SegLED import info7seg_decimalPoint
 from util7SegLED import info7seg_onOff
 from util7SegLED import info7seg_onDecimalPointOff
-from utilNetworkIP import NetworkIP_get_ipAddress_eth0
+from utilNetworkIP import *
 import time
 
 '''
+v0.6  2015/12/05
+  - add wlan0 to handle Wi-Fi connection
 v0.5  2015/12/05
   - get IP every time
 v0.4  2015/12/05
@@ -47,6 +49,8 @@ for loop in range(0,3):
 
 while True:
 	ipadr = NetworkIP_get_ipAddress_eth0()
+	if "0.0.0.0" in ipadr:
+		ipadr = NetworkIP_get_ipAddress_wlan0()
 	disp_ipAddress(ipadr, 0.5)
 	info7seg_allOff()
 	time.sleep(2.0)
