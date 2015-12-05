@@ -7,6 +7,8 @@ from utilNetworkIP import NetworkIP_get_ipAddress_eth0
 import time
 
 '''
+v0.5  2015/12/05
+  - get IP every time
 v0.4  2015/12/05
   - return error IP when the network is not available
 v0.3  2015/11/28
@@ -34,8 +36,6 @@ def disp_ipAddress(ipadr, intvl_sec):
 
 time.sleep(10) # to avoid failure at /etc/rc.local auto start
 
-ipadr = NetworkIP_get_ipAddress_eth0()
-
 info7seg_init()
 
 disp_0_9_DP(0.5) # initial test
@@ -46,7 +46,7 @@ for loop in range(0,3):
 	time.sleep(0.5)
 
 while True:
+	ipadr = NetworkIP_get_ipAddress_eth0()
 	disp_ipAddress(ipadr, 0.5)
 	info7seg_allOff()
 	time.sleep(2.0)
-
