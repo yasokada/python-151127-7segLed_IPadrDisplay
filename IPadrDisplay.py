@@ -7,6 +7,8 @@ from utilNetworkIP import NetworkIP_get_ipAddress_eth0
 import time
 
 '''
+v0.4  2015/12/05
+  - return error IP when the network is not available
 v0.3  2015/11/28
   - add wait (10sec) to avoid failure at /etc/rc.local auto start
 v0.2  2015/11/28
