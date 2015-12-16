@@ -8,7 +8,7 @@ import time
 
 '''
 v0.7  2015 Dec 17
-  - turn all off just after display numbers to distinguish 100 and 10 display
+  - turn all off after display each number to distinguish 100 and 10
 v0.6  2015/12/05
   - add wlan0 to handle Wi-Fi connection
 v0.5  2015/12/05
@@ -42,10 +42,10 @@ time.sleep(10) # to avoid failure at /etc/rc.local auto start
 
 info7seg_init()
 
-disp_0_9_DP(0.7) # initial test
+disp_0_9_DP(0.5) # initial test
 
 test1000 = "1000" # initial test2
-disp_ipAddress(test1000, 0.7)
+disp_ipAddress(test1000, 0.5)
 
 for loop in range(0,3):
 	info7seg_onDecimalPointOff(0.5)
@@ -56,6 +56,6 @@ while True:
 	ipadr = NetworkIP_get_ipAddress_eth0()
 	if "0.0.0.0" in ipadr:
 		ipadr = NetworkIP_get_ipAddress_wlan0()
-	disp_ipAddress(ipadr, 0.7)
+	disp_ipAddress(ipadr, 0.5)
 	info7seg_allOff()
 	time.sleep(2.0)

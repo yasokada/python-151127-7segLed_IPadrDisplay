@@ -10,7 +10,7 @@ import RPi.GPIO as GPIO
 
 '''
 v0.3  2015 Dec. 17
-	- add 300msec all of just after displaying number
+	- add short duration turn off just after displaying number
     to distinguish "100" and "10"
 v0.2  2015/11/28
 	- add info7seg_onOff()
@@ -72,8 +72,9 @@ def info7seg_decimalPoint():
 def info7seg_onOff(number, duration):
 	info7seg_on(number)
 	time.sleep(duration)
+	# below to distinguish 100 and 10
 	info7seg_allOff()
-	time.sleep(0.3)
+	time.sleep(0.15)
 
 def info7seg_onDecimalPointOff(duration):
 	info7seg_on(10)
