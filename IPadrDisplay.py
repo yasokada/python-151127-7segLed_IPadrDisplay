@@ -7,6 +7,9 @@ from utilNetworkIP import *
 import time
 
 '''
+v0.8  2017 Feb 08
+  - check wlan0 first, then eth0
+    + useful when IP is fixed on eth0, but eth0 is disconnected
 v0.7  2015 Dec 17
   - turn all off after display each number to distinguish 100 and 10
 v0.6  2015/12/05
@@ -53,9 +56,9 @@ for loop in range(0,3):
 	time.sleep(0.5)
 
 while True:
-	ipadr = NetworkIP_get_ipAddress_eth0()
+	ipadr = NetworkIP_get_ipAddress_wlan0()
 	if "0.0.0.0" in ipadr:
-		ipadr = NetworkIP_get_ipAddress_wlan0()
+		ipadr = NetworkIP_get_ipAddress_eth0()
 	disp_ipAddress(ipadr, 0.5)
 	info7seg_allOff()
 	time.sleep(2.0)
